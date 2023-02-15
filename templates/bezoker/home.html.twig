@@ -1,15 +1,47 @@
 {%  extends 'base.html.twig' %}
 {% block body %}
     <html>
+
     <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light float-end">
+    <style>
+
+        body, html {
+            height: 100%;
+        }
+
+        /* The hero image */
+        .hero-image {
+            /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/banner.jpg");
+
+            /* Set a specific height */
+            height: 50%;
+
+            /* Position and center the image to scale nicely on all screens */
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* Place text in the middle of the image */
+        .hero-text {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+        }
+    </style>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand float-start" href="#">Navbar</a>
+            <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
+            <div class="collapse navbar-collapse float-end" id="navbarNavAltMarkup">
+                <div class="navbar-nav float-end">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                     <a class="nav-link" href="#">Features</a>
                     <a class="nav-link" href="#">Pricing</a>
@@ -18,9 +50,88 @@
             </div>
         </div>
     </nav>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h1>Welcome to sopranos pizza</h1>
+            <p>{{ HomePage }}</p>
+            <button type="button" class="btn btn-primary">Bestellen</button>
+        </div>
+    </div>
+    <div class="MiddelCards row  " style="padding-left: 10%">
+        <div class="card m-5" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card m-5" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card m-5" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+        <div class="card m-5" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
 
-      <h1>{{ HomePage }}</h1>
+    <footer class="bg-light text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4">
+            <!--Grid row-->
+            <div class="row">
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Footer text</h5>
 
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                        aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                    </p>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Footer text</h5>
+
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis
+                        molestias. Fugiat pariatur maxime quis culpa corporis vitae repudiandae
+                        aliquam voluptatem veniam, est atque cumque eum delectus sint!
+                    </p>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:
+            <a class="text-dark" href="https://sopranos.com/">Sopranos.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
     </body>
     </html>
 {% endblock %}

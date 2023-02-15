@@ -22,7 +22,7 @@ class LuckyController extends AbstractController
         #[Route('/Home')]
           public function HomePage(): Response
     {
-        $date =date('L\t\h\e\ js');
+        $date =date('l \t\h\e\ jS');
         return  $this->render('bezoker/home.html.twig', ['HomePage'=>$date]);
 
     }
